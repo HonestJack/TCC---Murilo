@@ -1,0 +1,163 @@
+
+\input{preamble.tex}
+% Para revisão
+
+%% Use "final" option to remove all tracking markups
+%\usepackage[final]{changes}
+%\definechangesauthor[name={Valner}, color=red]{vb}
+%\usepackage[final]{changes}
+%\deleted[id=A]{}
+%\added[id=A]{}
+
+\titulo{
+Ensaio sobre os Efeitos de Envelhecimento Acelerado Decorrentes de BTI em Circuitos Digitais
+}
+\autor
+{
+	UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL\\
+	ESCOLA DE ENGENHARIA\\
+	DEPARTAMENTO DE ENGENHARIA ELÉTRICA\\
+	\vspace*{4\baselineskip} 
+    Murilo Eduardo Reinicke
+}
+\local{Porto Alegre}
+\data{2023}
+\orientador{Prof. Dr. Tiago Balen}
+\instituicao{UFRGS}
+\preambulo{Projeto de Diplomação I, apresentado ao Departamento de Engenharia Elétrica da Escola de Engenharia da Universidade Federal do Rio Grande do Sul, como requisito parcial para a obtenção do grau de Engenheiro Eletricista}
+
+% ---
+% INDICE
+% ---
+\makeindex
+% ---
+% GLOSSARIO
+% ---
+\makeglossaries
+
+% Exemplo de configurações do glossairo
+\renewcommand*{\glsseeformat}[3][\seename]{\textit{#1}  
+\glsseelist{#2}}
+
+\begin{document}
+
+\selectlanguage{brazil}
+%\selectlanguage{english}
+\frenchspacing 
+
+\imprimircapa
+\imprimirfolhaderosto*
+
+%\begin{fichacatalografica}
+%	\includepdf{FC.pdf}
+%\end{fichacatalografica}
+
+%%======================
+%% FOLHA DE APROVAÇÃO
+%%=====================
+
+%\begin{folhadeaprovacao}
+%	\begin{center}
+%		{\ABNTEXchapterfont\large{Eduarda de Castro Guterres}}
+		
+%		\vspace*{\fill}
+%		\begin{center}
+%			\ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+%		\end{center}
+		
+%		\vspace*{\fill}
+%		\hspace{.45\textwidth}
+%		\begin{minipage}{.5\textwidth}
+%			\imprimirpreambulo
+%		\end{minipage}%
+%	\end{center}
+	
+
+	%\assinatura{\textbf{Prof. Dr. Ály Ferreira Flores Filho} \\ Chefe do Departamento de Engenharia Elétrica (DELET) - UFRGS}
+%	
+%   
+%	
+ %  \begin{center}
+%	BANCA EXAMINADORA
+	
+  %\assinatura{\textbf{Prof. Dr. Giovani Bulla} \\ UFRGS}
+%	\assinatura{\textbf{Prof. Dr. Alexandre Balbinot} \\ UFRGS}
+	
+%	\assinatura{\textbf{Profª. Dra. Adriane Parraga} \\ UERGS}
+	
+%	\assinatura{\textbf{\imprimirorientador} \\ Orientador - UFRGS} 
+	
+ %  \end{center}
+  
+ %\begin{center}
+%	Aprovado em 21 de Maio de 2021.
+%	\end{center}
+%\end{folhadeaprovacao}
+%================
+% AGRADECIMENTOS
+%=================
+
+%\begin{agradecimentos}
+%	\blindtext
+    
+
+%\end{agradecimentos}
+
+%==========
+% Resumo / Abstract
+%===========
+
+% resumo em português
+\begin{resumo}[Resumo]
+O presente trabalho tem como objetivo estudar o comportamento de FPGAs afetados por envelhecimento acelerado, mais especificamente através do fenômeno de BTI, ou Bias-Temperature Instability que ocorre em decorrência da operação do dispositivo em ambientes de alta temperatura e sobre tensão de alimentação. Consequentemente uma variação na tensão de treashold ocorre nos transistores que compõe o componente. Serão ensaiados dois FPGAs: o Cyclone II da Altera e o XXXXX da Xilinx, ambos de tecnologia CMOS, com nó tecnológico de, respectivamente XXnm e YYnm. Os ensaios consistirão em sintetizar circuitos osciladores em anel nos dispositivos e submete-los a alta temperatura em uma câmara térmica. Após uma quantidade a ser determinada de ciclos estresse e relaxamento a frequência de oscilação será medida e será verificado se houve uma degradação na performance dele. Também será verificado se houve uma diferença relevante entre os dois dispositivos.
+
+    \vspace{\onelineskip}
+	\noindent
+        
+	\textbf{Palavras-chave}: Envelhecimento Acelerado, Bias-Temperature Instability, Osciladores em Anel.
+
+\end{resumo}
+
+\setlength{\absparsep}{18pt} 
+
+%=======================
+% SUMÁRIOS
+%========================
+\begin{comment} 
+% inserir lista de ilustrações
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% inserir lista de tabelas
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+%insere lista de abreviaturas
+\pdfbookmark[0]{\listadesiglasname}{toc}
+\input{chapters/06_abbreviations.tex}
+\cleardoublepage
+
+% inserir o sumario
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+\textual
+\end{comment} 
+%=====================
+%CHAPTERS
+%====================
+
+\input{chapters/Introducao}
+\input{chapters/ReferencialTeorico/_main}
+\input{chapters/Metodologia/_main}
+\input{chapters/Resultados/_main}
+
+%\bibliographystyle{bib/ref}
+\bibliography{bib/ref.bib}
+\input{chapters/07_abbreviations}
+%\input{chapters/07_appendix.tex
+
+\end{document}
