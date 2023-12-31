@@ -166,3 +166,51 @@
   {€}{{\euro}}1 {£}{{\pounds}}1,
   language=Python, extendedchars=true, breaklines=true
 }
+
+% colorir códigos
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Quadro}
+\definecolor{codebackground}{rgb}{0.95,0.95,0.92}
+\definecolor{numberscolor}{rgb}{0.21, 0.27, 0.31}
+\definecolor{pythoncomment}{rgb}{0,0.6,0}
+\definecolor{pythonstring}{rgb}{0.58,0,0.82}
+\definecolor{csharpcomment}{rgb}{0, 0.5, 0}
+\definecolor{csharpdocumentation}{rgb}{0.3, 0.3, 0.3}
+\definecolor{csharptype}{rgb}{0.17, 0.57, 0.69}
+\definecolor{csharpkeyword}{rgb}{0, 0, 1}
+\definecolor{csharpstring}{rgb}{0.64, 0.08, 0.08}
+\definecolor{innosetupkeyword}{rgb}{0, 0.35, 0.67}
+\definecolor{innosetupsections}{rgb}{0, 0, 0.5}
+\definecolor{xamlkeyword}{rgb}{0.5,0,0}
+\definecolor{xamlcomment}{rgb}{0,0.5,0}
+\lstloadlanguages{Python,csh,C,C++, XML, Verilog}
+
+\lstdefinestyle{VerilogStyle}{
+    language=Verilog,
+    backgroundcolor=\color{codebackground},
+    commentstyle=\color{csharpcomment},
+    keywordstyle=\color{csharpkeyword},
+    numberstyle=\scriptsize\color{numberscolor},
+    identifierstyle=\color{black},
+    stringstyle=\color{csharpstring}\ttfamily,
+    basicstyle=\linespread{0.9}\ttfamily\small,
+    moredelim=[l][\color{csharpdocumentation}]{///}, % Cor customizada para apresentar documentação de maneira independente
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    extendedchars=true,
+    xleftmargin=17pt,
+    framexleftmargin=17pt,
+    framexrightmargin=5pt,
+    framexbottommargin=4pt,
+    morecomment=[l]{//\ }, % Comentários de 1 linha devem ter espaço após as duas barras, para não misturar com documentação que usa 3 barras
+    morecomment=[s]{/*}{*/}, % Comentário multilinha
+    showstringspaces=false,
+}
