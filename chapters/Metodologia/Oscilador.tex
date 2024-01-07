@@ -1,9 +1,5 @@
 \section{Desenvolvimento dos Osciladores em Anel}
 
-Foram utilizadas as placas de desenvolvimento DE2 e ZedBoard. Elas foram escolhidas considerando suas disponibilidades no laboratório e por serem de fabricantes diferentes e possuírem nós tecnológicos diferentes.
-
-A DE2 possui o FPGA XXXXX da família o Cyclone II da fabricante Altera, pertencente a Intel, que possui um nó tecnológico de 90nm. A Zedboard possui o FPGA YYYYYY, da Xilinx, agora pertencente a AMD, que possui um nó tecnológico de 28nm.
-
 A topologia de oscilador em anel foi escolhida para os testes por sua disseminada utilização na caracterização de dispositivos MOSFET. Seu uso é amplo, pois medidas a utilizando se aproximam muito mais de aplicações reais do que medições paramétricas DC padrões.
 
 Foram realizados testes preliminares com diferentes quantidades de inversores para encontrar uma quantidade apropriada, pois, com poucos osciladores não há tempo suficiente para os inversores chavearem e com muitos osciladores o limite de iterações que as IDEs permitem era atingido.
@@ -47,18 +43,18 @@ Um bloco 'for' é utilizado para automatizar as atribuições dos inversores seg
 
 Um ponto importante de destacar é a necessidade de utilizar diretivas de compilação para impedir que os inversores sejam simplificados na síntese. Essas diretivas são diferentes em cada uma das IDEs, na Quartus II é utilizado a diretiva /* synthesis keep */ e na Vivado é utilizado a diretiva /* synthesis syn\_keep=1 */.
 
-Na Figura \ref{fig:DE2Imp3Osc} pode ser visto como o Quartus II implementa em hardware o código do Quadro \ref{code:RingOsc} para um N igual a 3. A implementação é feita através de portas lógicas comuns, o que é diferente da implementação feita pelo Vivado, como visto na FIgura \ref{fig:ZedImp3Osc}, que utiliza LUTs de uma variável para representar os inversores.
+Na Figura \ref{fig:DE2Imp3Osc} pode ser visto como o Quartus II implementa em hardware o código do Quadro \ref{code:RingOsc} para um N igual a 3. A implementação é feita através de portas lógicas comuns, o que é diferente da implementação feita pelo Vivado, como visto na Figura \ref{fig:ZedImp3Osc}, que utiliza LUTs de uma variável para representar os inversores.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{figures/DE2_Implementation_3Inverter_Gates.png}
+    \includegraphics[width=\linewidth]{figures/Metodologia/DE2_Implementation_3Inverter_Gates.png}
     \caption{Síntese do módulo de alto nível gerado no Quatus II. Fonte: O Autor}
     \label{fig:DE2Imp3Osc}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{figures/ZedBoard_Implementation_3Inverter.png}
+    \includegraphics[width=\linewidth]{figures/Metodologia/ZedBoard_Implementation_3Inverter.png}
     \caption{Síntese do módulo de alto nível gerado no Vivado. Fonte: O Autor}
     \label{fig:ZedImp3Osc}
 \end{figure}
@@ -80,22 +76,24 @@ module TopLevel
 endmodule
 \end{lstlisting}
 
-O módulo possui uma entrada en, responsável por habilitar o circuito, uma saída run, usada para indicar que o circuito está em funcionamento e as saídas dos dois osciladores out1001, out4999. Também são declaradas duas instâncias do módulo desenvolvido no Quadro \ref{code:RingOsc}.
+O módulo possui uma entrada 'en', responsável por habilitar o circuito, uma saída 'run', usada para indicar que o circuito está em funcionamento e as saídas dos dois osciladores 'out1001', 'out4999'. Também são declaradas duas instâncias do módulo desenvolvido no Quadro \ref{code:RingOsc}.
 
 As Figuras \ref{fig:DE2RtlSchem} e \ref{fig:ZedRtlSchem1} mostram, respectivamente, o circuito implementado pelo software Quartus II e Vivado para o módulo de alto nível que serão utilizado nos FPGAs.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.25]{figures/DE2_RTL_Schematic.png}
+    \includegraphics[scale=0.25]{figures/Metodologia/DE2_RTL_Schematic.png}
     \caption{Síntese de um oscilador com três inversores gerado no Quatus II. Fonte: O Autor}
     \label{fig:DE2RtlSchem}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{figures/ZedBoard_RTL_Schematic.png}
+    \includegraphics[width=\linewidth]{figures/Metodologia/ZedBoard_RTL_Schematic.png}
     \caption{Síntese de um oscilador com três inversores gerado no Vivado. Fonte: O Autor}
     \label{fig:ZedRtlSchem1}
 \end{figure}
+
+Nas duas placas a entrada 'en' foi atribuída a um pino do FPGA ligado a uma chave, a saída 'run' foi atribuída a um pino do FPGA ligado a um LED e as saídas 'out1001' e out4999 foram atribuídas a pinos do FPGA ligados a conectores de entrada e saída de uso geral.
 
 Após o desenvolvimento, o circuito sintetizado foi simulado utilizando a ferramenta apropriada para cada um dos componentes. Constatada a validade da solução ela foi transferida para os FPGAs reais e será medida, através de um osciloscópio, a frequência de oscilação das saídas do circuitos.
