@@ -1,8 +1,9 @@
 \section{Ensaios de Envelhecimento}
+\label{sec:MetEnsaios}
 
 Para induzir o fenômeno de BTI nos dispositivos foi utilizada uma câmara térmica para ensaios com componenentes eletrônicos. Inicialmente a temperatura de exposição foi de 100°C, temperatura que é inferior a faixa de ocorrência do BTI, mas que foi utilizada para verificar se os componentes não iriam ser danificados com a temperatura.
 
-A Figura \ref{fig:CamTerm} mostra a câmera térmica utilizada para os ensaios. Ele foi fabricado pela SPX Thermal Product Solutions e alcança temperaturas de -75ºC a 200ºC.
+A Figura \ref{fig:CamTerm} mostra a câmera térmica utilizada para os ensaios. Ele foi fabricado pela SPX Thermal Product Solutions sendo capaz de alcançar temperaturas de -75ºC a 200ºC.
 
 \begin{figure}[H]
     \centering
@@ -15,9 +16,13 @@ Constatando que não houve problema à 100ºC, a temperatura foi aumentada para 
 
 Nessa temperatura foi observado que o conector de alimentação da placa DE2 apresentava sinais de derretimento, por isso, a temperatura dos ensaios foi definida em 135°C. Temperatura que está dentro da faixa de 125 e 175ºC que a bibliografia indica como sendo a faixa em que o BTI ocorre mais facilmente.
 
-O tempo total de estresse térmico foi de 150h, tempo definido levando-se em conta o que foi estudado na seção \ref{sec:GerandoNbti}. A contagem do tempo era iniciada quando a câmara térmica era ligada e paralisada quando desligada.
+O tempo total de estresse térmico foi de 150h, tempo definido levando-se em conta o que foi estudado na seção \ref{sec:GerandoNbti}. A contagem do tempo era iniciada quando a câmara térmica era ligada e paralisada quando desligada. 
 
 O tempo que os dispositivos foram expostas ao calor não foi contínua, devido a impossibilidade de ficar durante a noite no laboratório e, por motivos de segurança, de deixar a câmara térmica ligada sem supervisão. Portanto os dispositivos, de forma geral, foram expostos à câmara térmica durante o dia e retirados dela durante a noite, ficando ligados o tempo todo, de forma que não houvesse relaxamento.
+
+As 150h de exposição foram divididas ao longo de 19 dias, não sendo necessariamente dias seguidos. A Tabela \ref{tab:TempoDia} mostra quanto tempo as placas foram expostas em cada dia em que foi realizado ensaio.
+
+\input{tables/Metodologia/TempoXDia}
 
 Outras duas placas, dos mesmo modelos das ensaiadas, foram deixadas fora da câmara térmica pelo mesmo tempo, sempre ligadas e com os mesmos osciladores em anel sintetizados. Comparar as medidas entre as placas que foram aquecidas com as que não foram é importante para verificar que se a degradação na frequência é proveniente do estresse térmico ou se é apenas resultado do funcionamento prolongado.
 
@@ -25,14 +30,14 @@ A câmara térmica permite realizar medidas nos dispositivos ensaiados enquanto 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{figures/Metodologia/Ensaios_FpgasNoForno.jpg}
+    \includegraphics[scale=0.08]{figures/Metodologia/Ensaios_FpgasNoForno.jpg}
     \caption{FPGAs dentro da Câmara térmica. Fonte: O Autor}
     \label{fig:CamTerm}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{figures/Metodologia/Ensaios_Osciloscopio.jpg}
+    \includegraphics[scale=0.08]{figures/Metodologia/Ensaios_Osciloscopio.jpg}
     \caption{Osciloscópio utilizado para as medidas. Fonte: O Autor}
     \label{fig:Osciloscopio}
 \end{figure}

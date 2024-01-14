@@ -1,4 +1,5 @@
 \section{Desenvolvimento dos Osciladores em Anel}
+\label{sec:MetOscilador}
 
 A topologia de oscilador em anel foi escolhida para os testes por sua disseminada utilização na caracterização de dispositivos MOSFET. Seu uso é amplo, pois medidas a utilizando se aproximam muito mais de aplicações reais do que medições paramétricas DC padrões.
 
@@ -43,19 +44,21 @@ Um bloco 'for' é utilizado para automatizar as atribuições dos inversores seg
 
 Um ponto importante de destacar é a necessidade de utilizar diretivas de compilação para impedir que os inversores sejam simplificados na síntese. Essas diretivas são diferentes em cada uma das IDEs, na Quartus II é utilizado a diretiva /* synthesis keep */ e na Vivado é utilizado a diretiva /* synthesis syn\_keep=1 */.
 
-Na Figura \ref{fig:DE2Imp3Osc} pode ser visto como o Quartus II implementa em hardware o código do Quadro \ref{code:RingOsc} para um N igual a 3. A implementação é feita através de portas lógicas comuns, o que é diferente da implementação feita pelo Vivado, como visto na Figura \ref{fig:ZedImp3Osc}, que utiliza LUTs de uma variável para representar os inversores.
+% Na Figura \ref{fig:DE2Imp3Osc} pode ser visto como o Quartus II implementa em hardware o código do Quadro \ref{code:RingOsc} para um N igual a 3. A implementação é feita através de portas lógicas comuns, o que é diferente da implementação feita pelo Vivado, como visto na Figura \ref{fig:ZedImp3Osc}, que utiliza LUTs de uma variável para representar os inversores.
+
+Nas Figuras \ref{fig:DE2Imp3Osc} e \ref{fig:ZedImp3Osc} pode ser visto como, respectivamente, o Quartus II e o Vivado implementam em hardware o código do quadro \ref{code:RingOsc} para um N igual a 3. É importante destacar que, por mais que para o Quartus II sejam utilizados portas lógicas para ilustrar o circuito, essas portas lógicas são construídas, na verdade, com LUTs que implementam o seu comportamento.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{figures/Metodologia/DE2_Implementation_3Inverter_Gates.png}
-    \caption{Síntese do módulo de alto nível gerado no Quatus II. Fonte: O Autor}
+    \caption{Síntese de um oscilador com três inversores no Quartus II. Fonte: O Autor}
     \label{fig:DE2Imp3Osc}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{figures/Metodologia/ZedBoard_Implementation_3Inverter.png}
-    \caption{Síntese do módulo de alto nível gerado no Vivado. Fonte: O Autor}
+    \caption{Síntese de um oscilador com três inversores gerado no Vivado. Fonte: O Autor}
     \label{fig:ZedImp3Osc}
 \end{figure}
 
@@ -83,14 +86,14 @@ As Figuras \ref{fig:DE2RtlSchem} e \ref{fig:ZedRtlSchem1} mostram, respectivamen
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.25]{figures/Metodologia/DE2_RTL_Schematic.png}
-    \caption{Síntese de um oscilador com três inversores gerado no Quatus II. Fonte: O Autor}
+    \caption{Síntese do módulo de alto nível gerado no Quartus II. Fonte: O Autor}
     \label{fig:DE2RtlSchem}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{figures/Metodologia/ZedBoard_RTL_Schematic.png}
-    \caption{Síntese de um oscilador com três inversores gerado no Vivado. Fonte: O Autor}
+    \caption{Síntese do módulo de alto nível gerado no Vivado. Fonte: O Autor}
     \label{fig:ZedRtlSchem1}
 \end{figure}
 

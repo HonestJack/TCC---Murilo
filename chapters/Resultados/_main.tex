@@ -1,1 +1,49 @@
 \chapter{Resultados}
+\label{sec:Resultados}
+
+Este capítulo irá mostrar os resultados obtidos através dos dados colhidos durante os ensaios de envelhecimento detalhados na seção \ref{sec:MetEnsaios}. Serão apresentadas as curvas de como a frequência dos osciladores variou com o tempo de exposição ao calor.
+
+As primeiras medias foram realizadas em temperatura ambiente antes dos ensaios iniciarem, para se ter as frequências iniciais dos osciladores. A Tabela \ref{tab:FreqIniciais} mostra esses valores, que serão utilizados como valor unitário quando os valores das frequências medidas estiver normalizado.
+
+\input{tables/Resultados/FreqIniciais}
+
+\input{chapters/Resultados/ComparacaoTAmbiente}
+\input{chapters/Resultados/Comparacao135}
+\input{chapters/Resultados/ComparacaoFreqXTemp}
+\input{chapters/Resultados/ComparacaoRelaxamento}
+
+% Cite as palavras-chave que necessariamente aparecerão no capítulo sobre Experimentos e Resultados do seu Projeto de Diplomação.
+% Ensaios de envelhecimento, medição de frequência, medidas de performance.
+
+% Explique que experimentos foram (e/ou ainda serão) realizados para a obtenção de resultados que sirvam à validação da solução implementada.
+% O principal experimento realizado será a exposição dos dispositivos à envelhecimento utilizando câmara térmica disponível no Laboratório de Caracterização Elétrica. Cada um dos dois FPGAs terão dois osciladores com 1001 e 4999 inversores. Eles foram expostos a temperatura de 135°C por um tempo total de 150 horas. Foi possível medir a frequência durante a exposição ao calor com um osciloscópio, obtendo-se valores de frequência para diversas temperaturas.
+
+% Liste os materiais, métodos e ferramentas efetivamente utilizados para a execução dos ensaios e experimentos. Relacione-os com os experimentos realizados.
+% Osciloscópio - Usado para medir a frequência dos osciladores.
+% Câmara Térmica - Usado para estressar os FPGAs.
+% FPGAs - Objeto do estresse.
+
+% Descreva brevemente os resultados mais importantes obtidos e sua aplicação no contexto do problema.
+% Os resultados mais importantes são as mudanças nos valores de frequência ao longo do tempo de envelhecimento. Foi verificado que a frequência do FPGA da placa ZedBoard degradou consideravelmente mais que a frequência do FPGA da placa DE2. Também foi verificado que o comportamento da degradação desacelera com o tempo, o que é esperado pelo que existe na literatura.
+
+% Quais das suas hipóteses iniciais foram completa ou parcialmente comprovadas com os resultados obtidos? Quais hipóteses não foram comprovadas?
+% Foi observado uma maior degradação na frequência do FPGA da placa ZedBoard. Isso corrobora a hipótese de que as duas placas não envelhecem com a mesma intensidade, o que pode ser devido ao fato que o nó tecnológico da ZedBoard ser menor que o da DE2, o que está de acordo com a literatura, que diz que o fenômeno do NBTI é mais crítico quanto menor for o transistor.
+
+% Compare os resultados obtidos e posicione a sua solução em relação aos trabalhos correlatos apresentados no capítulo da fundamentação teórico-prática.
+% Houve uma degradação de entorno de 1\% para a DE2 e 2,5\% para a ZedBoard. Comparando com outros trabalhos pode-se dizer que esses valores estão dentro do esperado.
+% O trabalho de (Lorenz, 2013) mostra uma degradação de 5\% com 144 horas de exposição à 125°C.
+% Já o trabalho de (Sato et al., 2014), que estudou métodos para diminuir o efeito de NBTI em osciladores em anel, resultou uma degradação de 0,25\%, com 42 horas de exposição, porém à apenas 85°C.
+
+% Formule um resumo do conteúdo pretendido para o capítulo de experimentos e resultados, incluindo elementos utilizados para responder às perguntas anteriores.
+% O capítulo de experimentos e resultados conterá as curvas de frequência por tempo de envelhecimento dos FPGAs para uma temperatura constante (Temperatura ambiente e 135°C). Será discutido as diferenças entre as duas placas e sobre o formato da curva.
+% Também contará com comparação entre as curvas de frequência por temperatura de uma placa para diferentes tempos de envelhecimento e feito uma comparação entre as duas placas, sendo que a DE2 não apresentou grande alteração, já a Zedboard sim.
+% Por fim, haverá uma discussão se esses resultados estão de acordo com o que foi apresentado no capítulo de Referências Bibliográficas.
+
+
+
+
+
+
+
+
+
