@@ -1,4 +1,11 @@
 \section{Comparação das Curvas a 135ºC}
+\label{sec:ResT135}
+
+Considerando o problema com a variabilidade da temperatura ambiente também foram realizadas medidas na temperatura de 135°C, por ser a temperatura que a câmara térmica estabilizava.
+
+As medidas nessa temperatura só começaram a ser feitas a partir de 14 horas de exposição, pelo fato de nos primeiros ciclos ter sido usado temperaturas mais baixas para verificar se haveriam danos críticos aos dispositivos, como descrito na Seção \ref{sec:MetEnsaios}.
+
+A Figura \ref{fig:T135DE2} mostra as curvas das frequências normalizadas dos osciladores das placas  DE2 que foi estressada termicamente em relação ao tempo de exposição. Nela é visto que a degradação continuou, mesmo que pequena, até o fim dos ensaios, o que não podia ser observado na Figura \ref{fig:TAmbDE2} devido a variação da temperatura ambiente.
 
 \begin{figure}[H]
     \centering
@@ -7,6 +14,8 @@
     \label{fig:T135DE2}
 \end{figure}
 
+A Figura \ref{fig:T135ZedBoard} mostra as curvas para a ZedBoard, possuindo um comportamento semelhante ao discutido sobre a Figura \ref{fig:TAmbZedBoard}.
+
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{figures/Resultados/T135ZedBoard}
@@ -14,9 +23,15 @@
     \label{fig:T135ZedBoard}
 \end{figure}
 
+A Figura \ref{fig:T135Ambas} mostras as duas as curvas das Figura \ref{fig:T135DE2} e \ref{fig:T135ZedBoard} juntas no mesmo gráfico.
+
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{figures/Resultados/T135Ambas}
     \caption{Comparação das duas placas a 135ºC. Fonte: O Autor}
     \label{fig:T135Ambas}
 \end{figure}
+
+A Tabela \ref{tab:FreqT135} mostra as frequências iniciais e finais dos osciladores das duas placas que foram estressadas.
+
+\input{tables/Resultados/FreqT135}

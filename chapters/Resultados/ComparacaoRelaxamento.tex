@@ -1,4 +1,9 @@
 \section{Comparação das Curvas de relaxamento}
+\label{sec:ResRelax}
+
+Após os ensaios de envelhecimento foram realizadas medidas nos dispositivos para verificar a recuperação da degradação infligida a eles.
+
+A Figura \ref{fig:RelaxEstressadas} mostra as curvas das frequências normalizadas ao longo do tempo de relaxamento das placas que foram estressadas termicamente. Nela se vê que os FPGAs da altera recuperaram mais que os da ZedBoard, e que ele apresenta uma tendência de continuar degradando após o fim dos ensaios, enquanto a ZedBoard apresentou uma estabilização na frequência.
 
 \begin{figure}[H]
     \centering
@@ -7,6 +12,8 @@
     \label{fig:RelaxEstressadas}
 \end{figure}
 
+É demonstrado na Figura \ref{fig:RelaxDE2} como as duas placas DE2 se comportaram ao longo do tempo de relaxamento. É visível que as duas apresentaram semelhança no formato da curva, inclusive alcançando um valor próximo na última medida. 
+
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{figures/Resultados/RelaxDE2}
@@ -14,9 +21,23 @@
     \label{fig:RelaxDE2}
 \end{figure}
 
+Uma comparação da recuperação das duas ZedBoard é ilustrada na Figura \ref{fig:RelaxZedBoard} onde é possível observar que o formato da curva é semelhante, porém, devido ao valor diferente de degradação que tiveram, a placa estressada recuperou menos proporcionalmente.
+
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{figures/Resultados/RelaxZedBoard}
     \caption{Curva de relaxamento das placas ZedBoard. Fonte: O Autor}
     \label{fig:RelaxZedBoard}
 \end{figure}
+
+A Tabela \ref{tab:Relax} mostra o percentual da frequência inicial que foi recuperado durante o período de relaxamento. 
+
+\input{tables/Resultados/Relax}
+
+Mas esses valores não refletem exatamente a realidade sobre a recuperação, pois a porcentagem de degradação foi diferente entre as placas. Uma análise mais condizente seria ver a proporção entre a porcentagem da recuperação e a porcentagem da degradação, de forma que se tem a um proporção de quanto da degradação foi recuperada. A Tabela \ref{tab:RelaxProp} mostra esses valores.
+
+\input{tables/Resultados/RelaxProp}
+
+Nela fica claro que as DE2 tiveram valores de recuperação semelhantes e que ambas recuperaram uma porção considerável, de entorno de 80\%, do que foi degradado. Já as ZedBoards que foram estressadas recuperaram apenas 10\% do que foi degradado e, diferente do outro modelo de FPGA, não teve semelhança com sua contraparte não estressada, que tiveram entre 29\% e 43\% de recuperação. 
+
+
