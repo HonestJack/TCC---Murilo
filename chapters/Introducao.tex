@@ -3,24 +3,46 @@
 	\chapter{Introdução}
 %=================
 
-A cada dia que passa mais e mais sistemas embarcados estão fazendo parte de nossas vidas, desempenhando papéis que vão de aplicações rotineiras como computadores e aparelhos celulares a aplicações críticas como tecnologia aeroespacial e médica, os sistemas estão cada vez mais complexos.
+Os sistemas embarcados cumprem um papel fundamental na nossa sociedade, desempenhando funções que vão de aplicações rotineiras como computadores e aparelhos celulares a aplicações críticas como tecnologia aeroespacial e médica, os sistemas estão cada vez mais complexos.
 
-Em aplicações críticas, a confiabilidade é essencial para garantir a segurança e a saúde das pessoas. Por exemplo, em equipamentos médicos, como monitores de sinais vitais ou respiradores mecânicos, falhas podem levar a resultados graves, e até mesmo fatais. Da mesma forma, em sistemas aeronáuticos, falhas podem resultar em acidentes com consequências desastrosas.
+Em aplicações críticas, a confiabilidade é essencial para garantir a segurança e a saúde das pessoas. Por exemplo, em equipamentos médicos, como monitores de sinais vitais ou respiradores mecânicos, falhas podem levar a resultados graves, e até mesmo fatais \cite{Kocak}. Da mesma forma, em sistemas aeronáuticos, falhas podem resultar em acidentes com consequências desastrosas \cite{Galler}.
 
-No entanto, esses sistemas embarcados muitas vezes atuam em ambientes hostis e que pode decorrer um envelhecimento acelerado e em degradação da funcionalidade ao longo do tempo.
+Com o avanço tecnológico os componentes eletrônicos estão cada vez menores, tendo sido cada vez de mais fácil acesso dispositivos cujos transistores possuem nó tecnológico na casa dos nanômetros. Esse processo é denominado miniaturização \cite{Radamson}, e ele permite a criação de circuitos mais rápidos, compactos e com menor consumo energético. Porém dispositivos menores estão mais propensos a efeitos de envelhecimento que degradam parâmetros dos transistores e diminuem sua confiabilidade em sistemas críticos \cite{Lorenz}.
 
-Um dos principais fenômenos que podem ocorrer é o BTI (bias-temperature instability) que consequentemente aumenta a variação de tensão de threshold ($\Delta$Vth) dos transistores p e transistores n que constituem o dispositivo, o que acarreta em uma menor velocidade de transição de aberto para fechado (ou de fechado para aberto) podendo depreciar a performance do sistema como um todo.
+% No entanto, esses sistemas embarcados muitas vezes atuam em ambientes hostis e que pode decorrer um envelhecimento acelerado e em degradação da funcionalidade ao longo do tempo. 
 
-Sabendo disso, é de grande importância entender a mudança de comportamento desses sistemas para ser possível realizar projetos com maior previsibilidade e robustez, consequentemente tornando viáveis produtos mais duráveis e seguros.
+Entre os diversos efeitos de envelhecimento que podem afetar um transistor, um dos que tem se tornado mais crítico e alvo de extensas pesquisas é o BTI (\textit{bias-temperature instability}) \cite{Garcia}. Ele tem como consequência um aumento no valor absoluto da tensão de \textit{threshold} ($\Delta$Vth) dos transistores do tipo p e transistores do tipo n que constituem o dispositivo \cite{Paul}, o que acarreta em uma menor velocidade de transição de aberto para fechado (ou de fechado para aberto) podendo depreciar a performance do sistema como um todo.
 
-Com isso, o trabalho tem como objetivo estudar os efeitos do envelhecimento em sistemas em chip de, pelo menos, dois diferentes nós tecnológicos de CMOS planar, 90nm e 28nm.
+É de grande importância entender a mudança de comportamento desses sistemas para ser possível realizar projetos com maior previsibilidade e robustez, consequentemente tornando viáveis produtos mais duráveis e seguros. Existem muitos trabalhos que realizaram estudos sobre o BTI, porém não muitos utilizando dispositivos comerciais.
+
+Com isso, o trabalho tem como objetivo estudar os efeitos do envelhecimento em sistemas em chip de dois diferentes nós tecnológicos de CMOS planar, 90nm e 28nm, utilizando, respectivamente a placa DE2 da altera, que possui um FPGA da família Cyclone 2, e a placa ZedBoard da Xilinx, que possui um FPGA da família Artix 7.
 
 Para isso foram definidos os seguintes objetivos específicos:
 \begin{itemize}
-    \item Desenvolvimento de oscilador em anel sintetizado utilizando linguagem de descrição de hardware;
-    \item Exposição dos componentes a envelhecimento acelerado;
-    \item Verificação na degradação da performance;
+    \item Desenvolver osciladores em anel sintetizados utilizando linguagem de descrição de hardware;
+    \item Expor os componentes a envelhecimento acelerado através de uma câmera térmica;
+    \item Verificar a degradação da performance;
+    \item Verificar a recuperação após o estresse térmico.
 \end{itemize}
+
+% Apresentação 
+
+% Motivação
+% Miniaturização dos transistores;
+% Transistores menores são mais propensos a efeitos de envelhecimento, sendo um dos mais críticos o BTI;
+
+% Problema
+% Muitos estudos sobre o efeito de BTI;
+% Porém poucos que utilizam dispositivos comerciais;
+
+% Relevância
+% Um conhecimento maior sobre como o BTI afeta FPGAs comerciais permitiriam realizar uma escolha melhor no projeto de sistemas que vão atuar em ambientes críticos.
+
+% Objetivos
+% Verificar se há diferença no efeito do BTI em FPGAs de nós tecnológicos diferentes;
+% Desenvolver osciladores em  anel em linguagem de descrição de hardware;
+% Realizar ensaios de envelhecimento utilizando uma câmara térmica.
+
 
 % Introdução: contextualize o seu trabalho e descreva sua motivação para realizá-lo.
 % Com o avanço tecnológico os componentes eletrônicos estão cada vez menores, o que permite a criação de circuitos mais rápidos, compactos e com menor consumo energético. Porém transistores menores também estão mais propensos a certos fenômenos, como o NBTI, que degrada seus parâmetros. Por isso é importante compreender como esses fenômenos afetam diferentes dispositivos comerciais.

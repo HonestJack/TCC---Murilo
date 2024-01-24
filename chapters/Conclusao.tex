@@ -1,4 +1,28 @@
 \chapter{Conclusão}
+\label{Conclusao}
+
+% Retomada da solução
+Neste trabalho foi proposta a realização de ensaios de estresse térmico para gerar NBTI nos transistores dos FPGAs e avaliar a degradação na frequência dos osciladores, para assim comparar a susceptibilidade dos dispositivos ao fenômeno estudado. Além de comparar a degradação entre as duas placas de fabricantes diferentes, ele foi comparada com a degradação de placas dos mesmos modelos mas que não foram estressadas termicamente. Finalmente, foram realizadas medidas para avaliar a recuperação que os dispositivos tiveram ante a degradação.
+
+% Resumo dos resultados
+Após as 150h de estresse foi observado uma maior degradação na frequência do FPGA da placa ZedBoard (aproximadamente 2\%) em relação a placa DE2 (aproximadamente 1\%). As comparações com entre as placas de mesmo modelo mostrou que a DE2 não apresentou muita diferença entre a placa estressada e a não estressada, já a ZedBoard sim. Nas medidas de relaxamento foi vito que A ZedBoard recuperou pouco (aproximadamente 10\%), já a DE2 recuperou quase completamente (aproximadamente 80\%).
+
+Isso corrobora a hipótese de que as duas placas não envelhecem com a mesma intensidade, o que pode ser devido ao fato que o nó tecnológico da ZedBoard ser menor que o da DE2, o que está de acordo com a literatura, que diz que o fenômeno do NBTI é mais crítico quanto menor for o transistor.
+
+% Comparando com outros trabalhos pode-se dizer que esses valores estão dentro do esperado. O trabalho de (Lorenz, 2013) mostra uma degradação de 5\% com 144 horas de exposição à 125°C. Já o trabalho de (Sato et al., 2014), que estudou métodos para diminuir o efeito de NBTI em osciladores em anel, resultou uma degradação de 0,25\%, com 42 horas de exposição, porém à apenas 85°C.
+% A ZedBoard recuperou pouco com o relaxamento, já a DE2 recuperou quase completamente.
+% Pode não ter ocorrido o NBTI na DE2 já que a diferença entre a estressada e a não estressada foi pequena;
+% Valores dentro do esperado da literatura. 
+% O resultado também pode ser devido ao fato da DE2 ser uma placa usada, portanto já envelhecida;
+
+% Contribuição
+Essas medidas trazem mais informações sobre como o NBTI afeta os dispositivos comerciais em questão, possibilitando uma escolha mais assertiva na hora de um projeto. O trabalho também contribuiu apresentando uma forma simples de analisar os efeitos de envelhecimento acelerado em dispositivos comerciais.
+
+% Trabalhos Futuros
+Um possível trabalho futuro seria realizar ensaios semelhantes utilizando um FPGA de tecnologia FinFET, pois os FPGAs estudados nesse são de tecnologia CMOS planar. Outro trabalho poderia ser a análise de diferentes topologias de oscilador em anel, como os propostos no trabalho de \cite{Sato}, em FPGAs de nós tecnológicos diferentes, para verificar como essas diferentes topologias se comportam em dispositivos diferentes.
+
+
+% Questionário
 
 % Conclusão: resuma a solução proposta no seu projeto e as contribuições do seu trabalho.
 
@@ -6,15 +30,40 @@
 % O trabalho pode contribuir apresentando uma forma simples de analisar os efeitos de envelhecimento acelerado em dispositivos comerciais.
 
 
-
 % Conclusão: descreva brevemente os resultados obtidos, fazendo uma análise crítica e comparando-os com trabalhos correlatos.
 
-% Foi observado uma maior degradação na frequência do FPGA da placa ZedBoard (2,5\%) em relação a placa DE2 (1\%). Isso corrobora a hipótese de que as duas placas não envelhecem com a mesma intensidade, o que pode ser devido ao fato que o nó tecnológico da ZedBoard ser menor que o da DE2, o que está de acordo com a literatura, que diz que o fenômeno do NBTI é mais crítico quanto menor for o transistor.
+% Foi observado uma maior degradação na frequência do FPGA da placa ZedBoard (2\%) em relação a placa DE2 (1\%). Isso corrobora a hipótese de que as duas placas não envelhecem com a mesma intensidade, o que pode ser devido ao fato que o nó tecnológico da ZedBoard ser menor que o da DE2, o que está de acordo com a literatura, que diz que o fenômeno do NBTI é mais crítico quanto menor for o transistor.
 % Comparando com outros trabalhos pode-se dizer que esses valores estão dentro do esperado. O trabalho de (Lorenz, 2013) mostra uma degradação de 5\% com 144 horas de exposição à 125°C. Já o trabalho de (Sato et al., 2014), que estudou métodos para diminuir o efeito de NBTI em osciladores em anel, resultou uma degradação de 0,25\%, com 42 horas de exposição, porém à apenas 85°C.
-
 
 
 % Conclusão: liste, de forma justificada, possíveis trabalhos futuros decorrentes do seu projeto.
 
 % Um possível trabalho futuro seria realizar ensaios semelhantes utilizando um FPGA de tecnologia FinFET, pois os FPGAs estudados nesse são de tecnologia CMOS planar.
 % Outro trabalho poderia ser a análise de diferentes topologias de oscilador em anel, como os propostos no trabalho de (Sato et al., 2014), em FPGAs de nós tecnológicos diferentes, para verificar como essas diferentes topologias se comportam em dispositivos diferentes.
+
+
+
+% Apresentação
+
+% Solução Proposta
+% Realização de ensaios de estresse térmico para gerar NBTI nos transistores dos FPGAs a avaliar a degradação na frequência dos osciladores, para assim comparar a susceptibilidade dos dispositivos ao fenômeno estudado;
+% Também foi feita a comparação com FPGAs que não foram estressados termicamente.
+% Ensaios de relaxamento.
+
+% Resultados e Análise Crítica
+% Foi observado uma maior degradação na frequência do FPGA da placa ZedBoard (2%) em relação a placa DE2 (1%).
+% A DE2 não apresentou muita diferença entre a placa estressada e a não estressada, já a ZedBoard sim;
+% A ZedBoard recuperou pouco com o relaxamento, já a DE2 recuperou quase completamente.
+% Pode não ter ocorrido o NBTI na DE2 já que a diferença entre a estressada e a não estressada foi pequena;
+% Corroboram a hipótese de que as duas placas não envelhecem com a mesma intensidade, pois o nó tecnológico da ZedBoard é menor que o da DE2, o que está de acordo com a literatura, que diz que o fenômeno do NBTI é mais crítico quanto menor for o transistor;
+% Valores dentro do esperado da literatura.
+% O resultado também pode ser devido ao fato da DE2 ser uma placa usada, portanto já envelhecida;
+
+% Contribuição
+% Aumenta o conhecimento sobre o NBTI em dispositivos comerciais;
+% Apresenta uma forma simples de analisar os efeitos de envelhecimento acelerado em dispositivos comerciais.
+
+% Trabalhos Futuros
+% Realizar ensaios semelhantes utilizando um FPGA de tecnologia FinFET;
+% Realizar ensaios semelhantes utilizando diferentes topologias de oscilador em anel;
+

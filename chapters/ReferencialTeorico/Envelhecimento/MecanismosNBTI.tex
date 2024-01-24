@@ -24,9 +24,9 @@ A taxa de geração dessas interfaces é dada pela Equação \ref{eq:TaxaIntefac
     \diff{N{\textsubscript it}}{t} = K{\scriptstyle F}(N{\scriptstyle 0} - N{\scriptstyle it}) - K{\scriptstyle R}N{\scriptstyle H}(0)N{\scriptstyle it}
 \end{equation}
 
-O primeiro termo do lado direito da equação mostra a componente de geração dos estados de interface, já o segundo termo descreve a regeneração das ligações, também denominada annealing reverso, uma característica especial do NBTI.
+O primeiro termo do lado direito da equação mostra a componente de geração dos estados de interface, já o segundo termo descreve a regeneração das ligações, também denominada \textit{annealing} reverso, uma característica especial do NBTI.
 
-$N\scriptstyle{0}$ representa a quantidade inicial de ligações Si-H, $N\scriptstyle{it}$ representa o número de estados de interface e $K\scriptstyle{R}$ é a taxa constante de criação de ligações quebradas. No termo de recuperação $N\scriptstyle{H}(0)$ representa o número de átomos de hidrogênio na interface do silício com o óxido, $K\scriptstyle{R}$ é a taxa constante de annealing reverso das ligações incompletas e átomos de hidrogênio em ligações Si-H.
+$N\scriptstyle{0}$ representa a quantidade inicial de ligações Si-H, $N\scriptstyle{it}$ representa o número de estados de interface e $K\scriptstyle{R}$ é a taxa constante de criação de ligações quebradas. No termo de recuperação $N\scriptstyle{H}(0)$ representa o número de átomos de hidrogênio na interface do silício com o óxido, $K\scriptstyle{R}$ é a taxa constante de \textit{annealing} reverso das ligações incompletas e átomos de hidrogênio em ligações Si-H.
 
 O lado direito da equação mostra que os estados de interface voltam a diminuir quando a condição de estresse é removida.
 
@@ -39,7 +39,7 @@ A criação de estados de interface é limitado pela difusão dos átomos de hid
 
 Onde $D\scriptstyle{H}$ representa o coeficiente de difusão, $\mu\scriptstyle{H}$ representa a mobilidade dos átomos de hidrogênio e $E\scriptstyle{ox}$ representa o campo elétrico que atravessa o óxido.
 
-O segundo termo pode ser negligenciado para átomos ou moléculas eletricamente neutros \cite{Lorenz}. $K\scriptstyle{F}$, $K\scriptstyle{R}$ e $D\scriptstyle{H}$ dependem da temperatura. $K\scriptstyle{F}$ também depende do campo elétrico aplicado. Isso demonstra que as interfaces só são geradas quando um campo elétrico é aplicado, o que não é necessário para o annealing e para a difusão.
+O segundo termo pode ser negligenciado para átomos ou moléculas eletricamente neutros \cite{Lorenz}. $K\scriptstyle{F}$, $K\scriptstyle{R}$ e $D\scriptstyle{H}$ dependem da temperatura. $K\scriptstyle{F}$ também depende do campo elétrico aplicado. Isso demonstra que as interfaces só são geradas quando um campo elétrico é aplicado, o que não é necessário para o \textit{annealing} e para a difusão.
 
 As Equações \ref{eq:TaxaInteface} e \ref{eq:TaxaDifusao} formam um sistema que pode ser resolvido caso seja considerado que $N\scriptstyle{it}$ é muito menor que $N\scriptstyle{0}$. A Equação \ref{eq:ResultanteRD} mostra a solução desse sistema e a dependência da quantidade de interfaces com relação o tempo.
 
@@ -59,9 +59,9 @@ A variação Vth será proporcional ao $N\textsubscript{it}$, de forma que poder
 
 Porém, esse fenômeno não explica completamente o fenômeno, não descrevendo corretamente a recuperação rápida que ocorre quando as condições de estresse não estão mais presentes \cite{Gilson}.
 
-Um segundo mecanismo relacionado, denominado Trapping/Detrapping, é baseado no aprisionamento de lacuna em defeitos no óxido pre-existentes ou provenientes de estresse elétrico \cite{Butzen}. O campo elétrico que gerado no gate quando o PMOS está negativamente polarizado causa o tunelamento de portadoras do canal nas falhas. Esse fenômeno vem sendo cada vez mais relevante na degradação por NBTI, considerando que falhas no óxido são mais comuns em transistores high-k.
+Um segundo mecanismo relacionado, denominado \textit{Trapping/Detrapping}, é baseado no aprisionamento de lacuna em defeitos no óxido pre-existentes ou provenientes de estresse elétrico \cite{Butzen}. O campo elétrico que gerado no gate quando o PMOS está negativamente polarizado causa o tunelamento de portadoras do canal nas falhas. Esse fenômeno vem sendo cada vez mais relevante na degradação por NBTI, considerando que falhas no óxido são mais comuns em transistores \textit{high-k}.
 
-Cada armadilha apresenta tem como característica a probabilidade de capturar e liberar um portador e o valor do impacto na tensão de treshold será gerado em caso de captura. As probabilidades tem relação com os tempos médios entre as capturas e emissões, já o impacto na tensão de treshold tem relação com a localização em que a armadilha está localizada, podendo ser muito relevante caso obstrua o caminho de percolação do canal. 
+Cada armadilha apresenta tem como característica a probabilidade de capturar e liberar um portador e o valor do impacto na tensão de \textit{treshold} será gerado em caso de captura. As probabilidades tem relação com os tempos médios entre as capturas e emissões, já o impacto na tensão de \textit{treshold} tem relação com a localização em que a armadilha está localizada, podendo ser muito relevante caso obstrua o caminho de percolação do canal. 
 
 % O modelo Trapping/Detrapping foi inicialmente desenvolvido para explicar a rápida recuperação do efeito de BTI. Assim surgiu um modelo misto, onde dois modelos coexistem: criação de defeitos na interface, dado pelo modelo Reaction-Difusion, e a captura e liberação de cargas por armadilhas pré-existentes no interior do óxido do transistor (HUARD, 2007). Neste modelo, a criação de defeitos na interface é o responsável pela parte permanente, não recuperável, da degradação enquanto as armadilhas, pré-existentes no interior do óxido, seriam responsáveis pela parte recuperável de BTI.
 

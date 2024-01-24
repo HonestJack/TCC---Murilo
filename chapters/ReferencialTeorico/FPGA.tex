@@ -1,10 +1,10 @@
 \section{FPGAs}
 
-FPGA, ou Field Programmable Gate Arrays, são dispositivos eletrônicos que são baseados em matrizes de blocos lógicos configuráveis que são conectados via interconexões programáveis \cite{AmdFpga}. Eles podem ser programados e reprogramados para as funcionalidades desejadas.
+FPGA, ou \textit{Field Programmable Gate Arrays}, são dispositivos eletrônicos que são baseados em matrizes de blocos lógicos configuráveis que são conectados via interconexões programáveis \cite{AmdFpga}. Eles podem ser programados e reprogramados para as funcionalidades desejadas.
 
-Sua utilização é necessária em aplicações onde uma implementação em software utilizando um microcontrolador não é capaz de cumprir os requisitos de frequência de operação \cite{Sulaiman}.
+Sua utilização é necessária em aplicações onde uma implementação em \textit{software} utilizando um microcontrolador não é capaz de cumprir os requisitos de frequência de operação \cite{Sulaiman}.
 
-O que cada bloco lógico possui internamente depende da fabricante e modelo do dispositivo, mas de forma geral possuem pelo menos Look-Up Tables (LUTs), que são implementações em hardware de tabelas verdade e elementos de memória, como Flip-Flops \cite{Sato}.
+O que cada bloco lógico possui internamente depende da fabricante e modelo do dispositivo, mas de forma geral possuem pelo menos \textit{Look-Up Tables} (LUTs), que são implementações em hardware de tabelas verdade e elementos de memória, como Flip-Flops \cite{Sato}.
 
 A Figura \ref{fig:FPGAStructure} ilustra a estrutura básica de um FPGA mostrando os blocos lógicos configuráveis, as conexões programáveis.
 
@@ -15,7 +15,7 @@ A Figura \ref{fig:FPGAStructure} ilustra a estrutura básica de um FPGA mostrand
     \label{fig:FPGAStructure}
 \end{figure}
 
-Os FPGAs são, de forma geral, programados utilizando linguagens de descrição de hardware (HDL), sendo VHDL e Verilog as mais utilizadas \cite{Ain}. Essas linguagens, diferentemente de linguagens de programação convencionais onde se escreve uma série de comandos que serão executados de maneira sequencial, descrevem um circuito elétrico que será sintetizado no dispositivo.
+Os FPGAs são, de forma geral, programados utilizando linguagens de descrição de \textit{hardware} (HDL), sendo VHDL e Verilog as mais utilizadas \cite{Ain}. Essas linguagens, diferentemente de linguagens de programação convencionais onde se escreve uma série de comandos que serão executados de maneira sequencial, descrevem um circuito elétrico que será sintetizado no dispositivo.
 
 A VHDL é pode ser utilizada para modelar sistemas digitais em diversos níveis de abstração indo do nível de algoritmo ao nível de portas lógicas. A complexidade pode variar do mais simples ao mais complexo \cite{Wunnava}. A Figura \ref{fig:Vhdl} mostra que a linguagem VHDL também pode ser definida como uma combinação de linguagens.
 

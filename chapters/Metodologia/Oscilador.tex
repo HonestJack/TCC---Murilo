@@ -38,7 +38,7 @@ endmodule
 
 O módulo possui uma entrada en, responsável por habilitar o circuito, uma saída and\_1 que é a saída da porta and do circuito, de onde o sinal do oscilador é obtido. O valor N é parametrizável, o que permite a reutilização do mesmo código para osciladores com diferentes números de inversores.
 
-São então instanciadas N registradores, que serão utilizados para criar os inversores. O registrador and\_1 recebe o resultado da operação E lógica do sinal de enable e a saída do último inversor. O primeiro inversor é definido como o registrador and\_1 invertido.
+São então instanciadas N registradores, que serão utilizados para criar os inversores. O registrador and\_1 recebe o resultado da operação E lógica do sinal de \textit{enable} e a saída do último inversor. O primeiro inversor é definido como o registrador and\_1 invertido.
 
 Um bloco 'for' é utilizado para automatizar as atribuições dos inversores seguintes, sendo a cada um atribuído o valor inversor anterior negado.
 

@@ -1,20 +1,20 @@
 \section{Efeitos de Envelhecimento}
-Os efeitos que causam envelhecimentos em circuitos podem ser divididos em dois grupos, os que causam falhas abruptas e os que causam deriva de parâmetros ao longo do tempo. Os principais exemplos do primeiro grupo são os TDDB (time-dependent dielectric breakdown) e EM (electromigration). Já, para o segundo grupo, se tem o NBTI (negative bias temperature instability) e o HCI (hot carrier injection) \cite{Lorenz}.
+Os efeitos que causam envelhecimentos em circuitos podem ser divididos em dois grupos, os que causam falhas abruptas e os que causam deriva de parâmetros ao longo do tempo. Os principais exemplos do primeiro grupo são os TDDB (\textit{time-dependent dielectric breakdown}) e EM (\textit{electromigration}). Já, para o segundo grupo, se tem o NBTI (\textit{negative bias temperature instability}) e o HCI (\textit{hot carrier injection}) \cite{Lorenz}.
 
 Os efeitos do primeiro grupo devem ser tratados estocasticamente, já os do segundo grupo podem ser tratados deterministicamente \cite{Lorenz}.
        
 Este trabalho tem como foco os efeitos de envelhecimento de longo prazo, portanto não será tratado sobre os efeitos que causam falhas abruptas.
 
 \subsection{Bias-Temperature Instability}
-A variação da tensão de threshold ($\Delta$Vth) dos transistores tipo p e tipo n é a principal característica a ser levada em conta ao analisar o envelhecimento acelerado de tecnologias CMOS. Essa variação acarreta em uma menor velocidade de chaveamento dos transistores.
+A variação da tensão de \textit{threshold} ($\Delta$Vth) dos transistores tipo p e tipo n é a principal característica a ser levada em conta ao analisar o envelhecimento acelerado de tecnologias CMOS. Essa variação acarreta em uma menor velocidade de chaveamento dos transistores.
 
-Uma das principais causas da variação da tensão de threshold é o fenômeno Bias-Temperature Instability (BTI), mais especificamente o Negative BTI (NBTI) afetando os transistores do tipo p e o Positive BTI (PBTI) afetando os transistores do tipo n.
+Uma das principais causas da variação da tensão de \textit{threshold} é o fenômeno Bias-Temperature Instability (BTI), mais especificamente o Negative BTI (NBTI) afetando os transistores do tipo p e o Positive BTI (PBTI) afetando os transistores do tipo n.
 
-O NBTI vem sendo estudado desde a década de 60 \cite{Alam}, mas com dispositivos CMOS de nós tecnológicos cada vez menores, esse fenômeno se torna um dos principais fatores que determinam a longevidade de transistores PMOS, diferentemente de transistores NMOS, que o principal fator é o HCI (hot-carrier induced degeneration) \cite{Bhardwaj}.
+O NBTI vem sendo estudado desde a década de 60 \cite{Alam}, mas com dispositivos CMOS de nós tecnológicos cada vez menores, esse fenômeno se torna um dos principais fatores que determinam a longevidade de transistores PMOS, diferentemente de transistores NMOS, que o principal fator é o HCI \cite{Bhardwaj}.
 
-A miniaturização dos transistores aumenta o impacto desse efeito \cite{Banaszeski}, devido a campos elétricos maiores devido a óxidos mais finos, temperaturas maiores causadas pelo aumento na densidade de transistores e o uso de dielétricos high-k, que estão mais propensos a apresentar falhas.
+A miniaturização dos transistores aumenta o impacto desse efeito \cite{Banaszeski}, devido a campos elétricos maiores devido a óxidos mais finos, temperaturas maiores causadas pelo aumento na densidade de transistores e o uso de dielétricos \textit{high-k}, que estão mais propensos a apresentar falhas.
 
-Transistores PMOS possuem uma tensão de threshold negativa. O NBTI diminui a tensão de treshold dos transistores PMOS, portanto, aumenta o valor absoluto dela, tornando-o ainda mais negativo.
+Transistores PMOS possuem uma tensão de \textit{threshold} negativa. O NBTI diminui a tensão de \textit{treshold} dos transistores PMOS, portanto, aumenta o valor absoluto dela, tornando-o ainda mais negativo.
 
 \input{chapters/ReferencialTeorico/Envelhecimento/MecanismosNBTI}
 \input{chapters/ReferencialTeorico/Envelhecimento/GerandoNBTI}
