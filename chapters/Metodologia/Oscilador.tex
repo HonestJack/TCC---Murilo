@@ -1,11 +1,11 @@
 \section{Desenvolvimento dos Osciladores em Anel}
 \label{sec:MetOscilador}
 
-A topologia de oscilador em anel foi escolhida para os testes por sua disseminada utilização na caracterização de dispositivos MOSFET. Seu uso é amplo, pois medidas a utilizando se aproximam muito mais de aplicações reais do que medições paramétricas DC padrões.
+A topologia de oscilador em anel foi escolhida para os testes por sua disseminada utilização na caracterização de dispositivos MOSFET. Seu uso é amplo, pois medidas utilizando esse circuito se aproximam muito mais de aplicações reais do que medições paramétricas DC padrões.
 
-Foram realizados testes preliminares com diferentes quantidades de inversores para encontrar uma quantidade apropriada, pois, com poucos osciladores não há tempo suficiente para os inversores chavearem e com muitos osciladores o limite de iterações que as IDEs permitem era atingido.
+Foram realizados testes preliminares com diferentes quantidades de inversores para encontrar uma quantidade apropriada, pois, com poucos osciladores não há tempo suficiente para os inversores chavearem e com muitos osciladores o limite de iterações em um bloco 'for' que as IDEs permitem era atingido.
 
-Considerando isso, foi decidido que em cada um dos dispositivos foi sintetizado dois osciladores, um com 1001 inversores e outro com 4999. A escolha de utilizar dois osciladores em cada FPGA foi tomada por dois motivos: para se ter certeza que as IDEs não estavam simplificando os estágios inversores do circuito sintetizado e para verificar que o envelhecimento afeta igualmente diferentes partes do FPGA.
+Considerando isso, foi decidido que em cada um dos dispositivos seria sintetizado dois osciladores, um com 1001 inversores e outro com 4999. A escolha de utilizar dois osciladores em cada FPGA foi tomada por dois motivos: para se ter certeza que as IDEs não estavam simplificando os estágios inversores do circuito sintetizado e para verificar que o envelhecimento afeta igualmente diferentes partes do FPGA.
 
 A grande quantidade de inversores é relevante, pois assim as pequenas variações aleatórias nas características de cada transistor que compõe os dispositivos tenderão a se diluir.
 
@@ -13,7 +13,7 @@ A grande quantidade de inversores é relevante, pois assim as pequenas variaçõ
 
 Para desenvolver e sintetizar os osciladores em anel foi utilizada a linguagem de descrição Verilog. Para o Cyclone II foi utilizada a IDE Quartus II versão 12.1, já para o ZedBoard foi utilizada a IDE Vivado versão 2023.1.
 
-O Quadro \ref{code:RingOsc} mostra o código desenvolvido em Verilog para o módulo que implementa o oscilador em anel com N inversores. O mesmo código foi utilizado para os dois FPGAs nas duas IDEs diferentes.
+O Quadro \ref{code:RingOsc} mostra o código desenvolvido em Verilog para o módulo que implementa o oscilador em anel com N inversores, sendo N igual a 5 caso nenhum valor seja definido durante a instanciação do módulo. O mesmo código foi utilizado para os dois FPGAs nas duas IDEs diferentes.
 
 \begin{lstlisting}[label={code:RingOsc}, style=VerilogStyle, caption={Módulo do Oscilador em Anel. Fonte: O Autor}]
 module RingOscillator 
@@ -38,7 +38,7 @@ endmodule
 
 O módulo possui uma entrada en, responsável por habilitar o circuito, uma saída and\_1 que é a saída da porta and do circuito, de onde o sinal do oscilador é obtido. O valor N é parametrizável, o que permite a reutilização do mesmo código para osciladores com diferentes números de inversores.
 
-São então instanciadas N registradores, que serão utilizados para criar os inversores. O registrador and\_1 recebe o resultado da operação E lógica do sinal de \textit{enable} e a saída do último inversor. O primeiro inversor é definido como o registrador and\_1 invertido.
+São então instanciadas N variáveis, que serão utilizados para criar os inversores. A variável and\_1 recebe o resultado da operação E lógica do sinal de \textit{enable} e a saída do último inversor. O primeiro inversor é definido como a variável and\_1 invertido.
 
 Um bloco 'for' é utilizado para automatizar as atribuições dos inversores seguintes, sendo a cada um atribuído o valor inversor anterior negado.
 
@@ -64,7 +64,7 @@ Nas Figuras \ref{fig:DE2Imp3Osc} e \ref{fig:ZedImp3Osc} pode ser visto como, res
 
 O Quadro \ref{code:TopLevel} mostra o módulo de alto nível em que é instanciado dois osciladores em anel, um com 1001 e outro de 4999 inversores. 
 
-\begin{lstlisting}[label={code:TopLevel}, style=VerilogStyle, caption={Estanciamento dos Módulos. Fonte: O Autor}]
+\begin{lstlisting}[label={code:TopLevel}, style=VerilogStyle, caption={Instanciação dos Módulos. Fonte: O Autor}]
 module TopLevel
 	(
 		input en,
