@@ -3,7 +3,7 @@
 
 As medidas em temperatura ambiente foram realizadas no início de cada um dos ciclos de estresse (como indicado na Tabela \ref{tab:TempoDia}) antes de ligar a câmara térmica. As medidas apresentam uma certa oscilação devido a variabilidade da temperatura ambiente.
 
-A Figura \ref{fig:TAmbEstressadas} mostra as curvas das frequências normalizadas dos osciladores das placas que foram estressadas em relação ao tempo de exposição. Nela é possível ver um comportamento da DE2 de uma diminuição da frequência no inicio dos ensaios seguido de uma estabilidade. Já a ZedBoard apresentou uma degradação maior e ao longo de todas as medidas, o formato da curva é o esperado segundo a Equação \ref{eq:VthTempo} que indica uma degradação decrescente.
+As curvas da Figura \ref{fig:TAmbEstressadas} mostram as frequências normalizadas dos osciladores das placas que foram estressadas em relação ao tempo de exposição. Nas curvas da placa DE2 é possível ver uma diminuição da frequência no início dos ensaios seguido de uma estabilidade. Já as curvas da placa ZedBoard apresentam uma degradação maior e ao longo de todas as medidas. O formato das curvas é o esperado segundo a Equação \ref{eq:VthTempo} que indica uma degradação que desacelera com o tempo devido a uma saturação do efeito do NBTI.
 
 \begin{figure}[H]
     \centering
@@ -28,15 +28,20 @@ As mesmas curvas são mostradas na Figura \ref{fig:TAmbZedBoard}, porém para as
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.75]{figures/Resultados/TAmbZedBoard}
-    \caption{Curva das placas DE2 a temperatura ambiente. Fonte: O Autor}
+    \caption{Curva das placas ZedBoard a temperatura ambiente. Fonte: O Autor}
     \label{fig:TAmbZedBoard}
 \end{figure}
 
-A Tabela \ref{tab:FreqFinaisTAmb} mostra os valores finais das frequências de cada um dos osciladores. Já a Tabela \ref{tab:DegradFinaisTAmb} mostra a porcentagem da degradação das frequências em relação às frequências iniciais.
+A Tabela \ref{tab:FreqFinaisTAmb} mostra os valores finais das frequências de cada um dos osciladores. Já a Tabela \ref{tab:DegradFinaisTAmb} mostra a porcentagem da degradação das frequências em relação às frequências iniciais, valor encontrado através da Equação \ref{eq:DegradacaoPorcent} onde D é a degradação, $F\scriptstyle{i}$ é a frequência inicial e $F\scriptstyle{f}$ é a frequência final.
 
 \input{tables/Resultados/FreqFinaisTAmb}
 
 \input{tables/Resultados/DegradFinaisTAmb}
+
+\begin{equation}
+    \label{eq:DegradacaoPorcent}
+    D = \frac{F{\scriptstyle i} - F{\scriptstyle f}}{F{\scriptstyle i}} X 100\%
+\end{equation}
 
 Na Tabela \ref{tab:DegradFinaisTAmb} é confirmado o que foi visto na Figura \ref{fig:TAmbEstressadas} de que a ZedBoard apresentou uma degradação maior que a DE2. Além disso, nela também é visível que a diferença entre o dispositivo estressado e o não estressado é consideravelmente maior no caso da ZedBoard do que no caso da DE2, corroborando com o mostrado nas Figuras \ref{fig:TAmbDE2} e \ref{fig:TAmbZedBoard}.
 

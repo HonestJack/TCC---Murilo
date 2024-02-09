@@ -2,12 +2,14 @@
 \label{Conclusao}
 
 % Retomada da solução
-Neste trabalho foi proposta a realização de ensaios de estresse térmico para gerar NBTI nos transistores dos FPGAs e avaliar a degradação na frequência dos osciladores, para assim comparar a susceptibilidade dos dispositivos ao fenômeno estudado. Além de comparar a degradação entre as duas placas de fabricantes diferentes, ela foi comparada com a degradação de placas dos mesmos modelos mas que não foram estressadas termicamente. Finalmente, foram realizadas medidas para avaliar a recuperação que os dispositivos tiveram ante a degradação.
+Neste trabalho foi proposta a realização de ensaios de estresse térmico para gerar NBTI nos transistores de diferentes FPGAs e avaliar a degradação na frequência de osciladores em anel sintetizados neles, para assim comparar a susceptibilidade dos dispositivos ao fenômeno estudado. Os dispositivos ensaiados foram uma placa DE2, que possui um FPGA da família Cyclone II, fabricado pela Altera, de nó tecnológico de 90nm, e uma placa ZedBoard, com um FPGA da família Artix 7, da Xilinx, de nó tecnológico de 28nm.
+
+Além de comparar a degradação entre as duas placas de fabricantes diferentes, ela foi comparada com a degradação de placas dos mesmos modelos mas que não foram estressadas termicamente. Finalmente, foram realizadas medidas para avaliar a recuperação que os dispositivos tiveram ante a degradação.
 
 % Resumo dos resultados
 Após as 150h de estresse foi observado uma maior degradação na frequência do FPGA da placa ZedBoard (aproximadamente 2\%) em relação a placa DE2 (aproximadamente 1\%). As comparações com entre as placas de mesmo modelo mostrou que a DE2 não apresentou muita diferença entre a placa estressada e a não estressada, já a ZedBoard sim. Nas medidas de relaxamento foi visto que A ZedBoard recuperou pouco (aproximadamente 10\%), já a DE2 recuperou quase completamente (aproximadamente 80\%).
 
-Isso corrobora a hipótese de que as duas placas não envelhecem com a mesma intensidade, o que pode ser devido ao fato que o nó tecnológico da ZedBoard ser menor que o da DE2, o que está de acordo com a literatura, que diz que o fenômeno do NBTI é mais crítico quanto menor for o transistor.
+Isso corrobora a hipótese de que as duas placas não envelhecem com a mesma intensidade, o que pode ser devido ao fato que o nó tecnológico da ZedBoard ser menor que o da DE2, o que está de acordo com a literatura, que diz que o fenômeno do NBTI é mais crítico quanto menor for o nó tecnológico.
 
 % Comparando com outros trabalhos pode-se dizer que esses valores estão dentro do esperado. O trabalho de (Lorenz, 2013) mostra uma degradação de 5\% com 144 horas de exposição à 125°C. Já o trabalho de (Sato et al., 2014), que estudou métodos para diminuir o efeito de NBTI em osciladores em anel, resultou uma degradação de 0,25\%, com 42 horas de exposição, porém à apenas 85°C.
 % A ZedBoard recuperou pouco com o relaxamento, já a DE2 recuperou quase completamente.
@@ -19,7 +21,7 @@ Isso corrobora a hipótese de que as duas placas não envelhecem com a mesma int
 Essas medidas trazem mais informações sobre como o NBTI afeta os dispositivos comerciais em questão, possibilitando uma escolha mais assertiva na hora de um projeto. O trabalho também contribuiu apresentando uma forma simples de analisar os efeitos de envelhecimento acelerado em dispositivos comerciais.
 
 % Trabalhos Futuros
-Um possível trabalho futuro seria tentar garantir que os inversores do oscilador em anel estão sendo implementados com portas lógicas propriamente ditas ao invés de LUTs, para assim conseguir medir o atraso individual de cada transistor. Outro trabalho poderia ser realizar ensaios semelhantes utilizando um FPGA de tecnologia FinFET, pois os FPGAs estudados nesse são de tecnologia CMOS planar. Um último trabalho seria a análise de diferentes topologias de oscilador em anel, como os propostos no trabalho de \cite{Sato}, em FPGAs de nós tecnológicos diferentes, para verificar como essas diferentes topologias se comportam em dispositivos diferentes.
+Um possível trabalho poderia ser realizar ensaios semelhantes utilizando um FPGA de tecnologia FinFET, pois os FPGAs estudados nesse são de tecnologia CMOS planar. Outra sugestão de trabalho seria a análise de diferentes topologias de oscilador em anel, como os propostos no trabalho de \cite{Sato}, em FPGAs de nós tecnológicos diferentes, para verificar como essas diferentes topologias se comportam em dispositivos diferentes.
 
 
 % Questionário
