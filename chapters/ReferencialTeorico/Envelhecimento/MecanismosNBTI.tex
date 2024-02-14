@@ -4,13 +4,13 @@
 
 O NBTI não pode ser explicado por um único mecanismo físico, mas por uma superposição de diversos processos \cite{Butzen}. Dois desses fenômenos são os mais aceitos, sendo eles: a geração de armadilhas na interface, o aprisionamento de lacunas.
 
-O primeiro pode ser explicado pelo modelo de Reação-Difusão (RD), que diz que o NBTI é causado por ligações Si-H quebradas na interface entre o substrato e o oxido do gate. Essas ligações Si-H são formadas na fabricação do dispositivos para impedir que os átomos de silício fiquem com a valência incompleta após a colocação da camada de óxido de silício (SiO\small{2}) sobre o substrato. As ligações pendentes são denominadas estados de interface e podem voltar a ocorrer devido a campos elétricos elevados e alta temperatura \cite{Banaszeski}.
+O primeiro pode ser explicado pelo modelo de Reação-Difusão (RD), que diz que o NBTI é causado por ligações Si-H quebradas na interface entre o substrato e o óxido do gate. Essas ligações Si-H são formadas na fabricação dos dispositivos para impedir que os átomos de silício fiquem com a valência incompleta após a colocação da camada de óxido de silício (SiO\small{2}) sobre o substrato. As ligações pendentes são denominadas estados de interface e podem voltar a ocorrer devido a campos elétricos elevados e alta temperatura \cite{Banaszeski}.
 
 A Figura \ref{fig:PmosCrossSec} mostra as ligações Si-H na interface entre o gate e o substrato de um transistor PMOS.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=1]{figures/ReferencialTeorico/Cross section of a PMOS transistor.png}
+    \includegraphics[scale=0.4]{figures/ReferencialTeorico/Cross section of a PMOS transistor.png}
     \caption{Seção da interface gate-substrato de um transistor PMOS. Fonte: \cite{Lorenz}}
     \label{fig:PmosCrossSec}
 \end{figure}
@@ -59,9 +59,9 @@ A variação Vth será proporcional ao $N\textsubscript{it}$, de forma que poder
 
 Porém, esse fenômeno não explica completamente o fenômeno, não descrevendo corretamente a recuperação rápida que ocorre quando as condições de estresse não estão mais presentes \cite{Gilson}.
 
-Um segundo mecanismo relacionado, denominado \textit{Trapping/Detrapping}, é baseado no aprisionamento de lacuna em defeitos no óxido pre-existentes ou provenientes de estresse elétrico \cite{Butzen}. O campo elétrico que é gerado no gate quando o PMOS está negativamente polarizado causa o tunelamento de portadores do canal, levando-as diretamente até nas falhas no óxido. Esse fenômeno vem sendo cada vez mais relevante na degradação por NBTI, considerando que falhas no óxido são mais comuns em transistores \textit{high-k}.
+Um segundo mecanismo relacionado, denominado \textit{Trapping/Detrapping}, é baseado no aprisionamento de lacunas em defeitos no óxido preexistentes ou provenientes de estresse elétrico \cite{Butzen}. O campo elétrico que é gerado no gate quando o PMOS está negativamente polarizado causa o tunelamento de portadores do canal, levando-as diretamente até nas falhas no óxido. Esse fenômeno vem sendo cada vez mais relevante na degradação por NBTI, considerando que falhas no óxido são mais comuns em transistores \textit{high-k}.
 
-Cada armadilha apresenta como característica a probabilidade de capturar e liberar um portador e o valor do impacto na tensão de \textit{treshold} será gerado em caso de captura. As probabilidades tem relação com os tempos médios entre as capturas e emissões, já o impacto na tensão de \textit{treshold} tem relação com a localização em que a armadilha está localizada, podendo ser muito relevante caso obstrua o caminho de percolação do canal. 
+Cada armadilha apresenta como característica a probabilidade de capturar e liberar um portador e o valor do impacto na tensão de \textit{threshold} será gerado em caso de captura. As probabilidades tem relação com os tempos médios entre as capturas e emissões, já o impacto na tensão de \textit{threshold} tem relação com a localização em que a armadilha está localizada, podendo ser muito relevante caso obstrua o caminho de percolação do canal. 
 
 % O modelo Trapping/Detrapping foi inicialmente desenvolvido para explicar a rápida recuperação do efeito de BTI. Assim surgiu um modelo misto, onde dois modelos coexistem: criação de defeitos na interface, dado pelo modelo Reaction-Difusion, e a captura e liberação de cargas por armadilhas pré-existentes no interior do óxido do transistor (HUARD, 2007). Neste modelo, a criação de defeitos na interface é o responsável pela parte permanente, não recuperável, da degradação enquanto as armadilhas, pré-existentes no interior do óxido, seriam responsáveis pela parte recuperável de BTI.
 
@@ -82,14 +82,14 @@ Caminhos de percolação são os caminhos de condução que se formam em transis
 
 Esses dois mecanismos podem sem considerados simultaneamente, sendo o primeiro responsável por uma componente permanente da degradação e o segundo responsável por uma componente recuperável da degradação \cite{Banaszeski}.
 
-Cada um desses fenômenos contribui para a variação da tensão de treashold resultando na Equação \ref{eq:SomaVth}. Onde $V\scriptstyle{IT}$ á a contribuição das armadilhas na interface (primeiro mecanismo), $V\scriptstyle{HT}$ é a contribuição do aprisionamento em defeitos pré existentes e $V\scriptstyle{OT}$ é a contribuição do aprisionamento em defeitos gerados eletricamente (segundo mecanismo).
+Cada um desses fenômenos contribui para a variação da tensão de threshold resultando na Equação \ref{eq:SomaVth}. Onde $\Delta V\scriptstyle{IT}$ é a contribuição das armadilhas na interface (primeiro mecanismo), $V\Delta \scriptstyle{HT}$ é a contribuição do aprisionamento em defeitos pré existentes e $V\Delta \scriptstyle{OT}$ é a contribuição do aprisionamento em defeitos gerados eletricamente (segundo mecanismo).
 
 \begin{equation}
     \label{eq:SomaVth}
     \Delta V{\scriptstyle {th}} = \Delta V{\scriptstyle {IT}} + \Delta V{\scriptstyle {HT}} + \Delta V{\scriptstyle {OT}}
 \end{equation}
 
-A Equação \ref{eq:VthTempo} mostra uma aproximação da variação da tensão de treshold ao longo do tempo considerando um nó tecnológico específico e um certo conjunto de condições ambientais \cite{Butzen}.
+A Equação \ref{eq:VthTempo} mostra uma aproximação da variação da tensão de threshold ao longo do tempo considerando um nó tecnológico específico e um certo conjunto de condições ambientais \cite{Butzen}.
 
 \begin{equation}
     \label{eq:VthTempo}
