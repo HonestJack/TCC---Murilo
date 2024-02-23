@@ -5,10 +5,10 @@ Eles também são utilizados como sensores de alta precisão que aumentam a conf
 
 O circuito do oscilador em anel consiste em portas lógicas inversoras ligadas em sequência com uma realimentação entre a saída da última e a entrada da primeiro. É necessário que haja um número ímpar de inversores, para assim haver uma inversão periódica da entrada e da saída. O atraso de propagação de cada inversor e a realimentação gera uma onda quadrada na saída.
 
-O período da oscilação é duas vezes o somatório do atraso de cada inversor. A Equação \ref{eq:TotalDelay} mostra frequência de oscilação, considerando que todos os inversores têm o mesmo atraso, onde N representa o número de inversores e Ta representa o tempo de atraso de um inversor.
+O período da oscilação é duas vezes o somatório do atraso de cada inversor. A Equação \ref{eq:TotalDelay} mostra frequência de oscilação, considerando que todos os inversores têm o mesmo atraso, onde $N$ representa o número de inversores e $Ta$ representa o tempo de atraso de um inversor.
 
 \begin{equation}
-    F = \frac{1}{2.N.Ta}
+    F = \frac{1}{2NTa}
     \label{eq:TotalDelay}
 \end{equation}
          
@@ -20,6 +20,22 @@ A Figura \ref{fig:RingOsc} mostra o diagrama do oscilador em anel. O circuito em
     \caption{Oscilador em Anel. Fonte: \cite{Sparkfun}, modificado pelo autor}
     \label{fig:RingOsc}
 \end{figure}
+
+A frequência de um oscilador em anel pode ser utilizada pra medir indiretamente a variação na tensão de \textit{threshold} causada pelo NBTI (as causas do NBTI serão explicadas com maior profundidade na Seção \ref{sec:BiasTemperatureInstability}). Um aumento no valor absoluto da tensão de \textit{treshold} implica em um maior atraso para o transistor ser chaveado, já que suas capacitâncias precisam ser carregadas até um valor maior de tensão.
+
+A Equação \ref{eq:TransistorDelay} relaciona a tensão de \textit{threshold} com o atraso gerado em um transistor MOS \cite{Rjoub}. Onde $V{\scriptstyle DD}$ é a tensão de alimentação do circuito, $V{\scriptstyle th}$ é a tensão de \textit{threshold}, $C{\scriptstyle L}$ é a capacitância de carga e $k$ é uma constante que depende de parâmetros construtivos.
+
+\begin{equation}
+    Td = \frac{C{\scriptstyle {L}}V{\scriptstyle {DD}}}{k(V{\scriptstyle {DD}} - V{\scriptstyle {th}})^2}
+    \label{eq:TransistorDelay}
+\end{equation}
+
+O $Td$ da Equação \ref{eq:TransistorDelay} não é equivalente ao $Ta$ da Equação \ref{eq:TotalDelay}, pois o atraso de cada inversor dependerá de como ele é constituído. Porém se considerarmos eles proporcionais é possível unir as Equações \ref{eq:TotalDelay} e \ref{eq:TransistorDelay} obtendo a Equação \ref{eq:FreqVthRelation}, onde $k'$ é a constante proporcional entre os tempos de atraso. A Equação \ref{eq:FreqVthRelation} demonstra que com um aumento do $V{\scriptstyle th}$ há uma diminuição da frequência.
+
+\begin{equation}
+    F = \frac{kk'(V{\scriptstyle {DD}} - V{\scriptstyle {th}})^2}{2NC{\scriptstyle {L}}V{\scriptstyle {DD}}}
+    \label{eq:FreqVthRelation}
+\end{equation}
 
 Uma quantidade na casa das centenas de inversores no circuito reduzirá as variações aleatórias intrínsecas de cada MOSFET que poderiam aparecer caso fossem medidos individualmente, permitindo uma caracterização mais confiável e robusta.
 

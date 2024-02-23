@@ -80,9 +80,9 @@ Caminhos de percolação são os caminhos de condução que se formam em transis
 
 % É sabido que a região onde se encontra o átomo dopante é uma região de maior resistência para a passagem do portador, funcionando como barreiras onde a energia de condução é mais elevada. Assim, em transistores nanométricos, onde não há presença de dopantes formam-se caminhos definidos pelo qual ocorre a condução da corrente, chamados de caminho de percolação, ou percolation-path (ASHRAF, 2011).
 
-Esses dois mecanismos podem sem considerados simultaneamente, sendo o primeiro responsável por uma componente permanente da degradação e o segundo responsável por uma componente recuperável da degradação \cite{Banaszeski}.
+Esses dois mecanismos podem ser considerados simultaneamente, sendo o primeiro responsável por uma componente permanente da degradação e o segundo responsável por uma componente recuperável da degradação \cite{Banaszeski}.
 
-Cada um desses fenômenos contribui para a variação da tensão de threshold resultando na Equação \ref{eq:SomaVth}. Onde $\Delta V\scriptstyle{IT}$ é a contribuição das armadilhas na interface (primeiro mecanismo), $V\Delta \scriptstyle{HT}$ é a contribuição do aprisionamento em defeitos pré existentes e $V\Delta \scriptstyle{OT}$ é a contribuição do aprisionamento em defeitos gerados eletricamente (segundo mecanismo).
+Cada um desses fenômenos contribui para a variação da tensão de threshold resultando na Equação \ref{eq:SomaVth}. Onde $\Delta V\scriptstyle{IT}$ é a contribuição das armadilhas na interface (primeiro mecanismo), $\Delta V\scriptstyle{HT}$ é a contribuição do aprisionamento em defeitos pré existentes e $\Delta V\scriptstyle{OT}$ é a contribuição do aprisionamento em defeitos gerados eletricamente (segundo mecanismo).
 
 \begin{equation}
     \label{eq:SomaVth}
@@ -96,9 +96,9 @@ A Equação \ref{eq:VthTempo} mostra uma aproximação da variação da tensão 
     \Delta Vth = A(TSP.t)^n
 \end{equation}
 
-Onde A é uma constante que depende da tecnologia, t é o tempo, n é a constante exponencial do NBTI e TSP é a probabilidade do transistor estar negativamente polarizado.
+Onde \textit{A} é uma constante que depende da tecnologia, \textit{t} é o tempo, \textit{n} é a constante exponencial do NBTI e \textit{TSP} é a probabilidade do transistor estar negativamente polarizado.
 
-O TSP de um transistor pode depender não só de seu duty cicle, mas também de sua posição na topologia do circuito. Por exemplo, no caso de dois transistores que compõe a malha de pull-up de uma porta NOR, o TSP do transistor superior depende apenas de seu sinal de entrada, já o TSP do inferior depende da combinação de seu sinal de entrada e do sinal de entrada do transistor superior, de forma que o transistor superior terá uma tendência maior a sofrer envelhecimento.
+O \textit{TSP} de um transistor pode depender não só de seu duty cicle, mas também de sua posição na topologia do circuito. Por exemplo, no caso de dois transistores que compõe a malha de pull-up de uma porta NOR, o TSP do transistor superior depende apenas de seu sinal de entrada, já o TSP do inferior depende da combinação de seu sinal de entrada e do sinal de entrada do transistor superior, de forma que o transistor superior terá uma tendência maior a sofrer envelhecimento.
 
 Quando não há campo elétrico atravessando o óxido do transistor, o que no caso dos PMOS ocorre quando a tensão de gate é positiva, há a recuperação das armadilhas de interface \cite{Chen}. Ou seja, em um circuito em que um transistor alterna entre fechado e aberto, haverá uma certa recuperação da degradação quando o transistor estiver fechado. A Figura \ref{fig:recover} exemplifica esse comportamento de estresse e relaxamento em um transistor.
 
